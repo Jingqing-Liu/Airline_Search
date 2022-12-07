@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="card p-4 mt-5">
+        <div class="row g-3">
+            <div class="col-12 mb-4">
+                <h4>Flight Search</h4>
+                <span class="text-muted">Please provide required information to gain what you need!</span>
+            </div>
+            
+            <div class="col-lg-4 col-md-12">
+                <div class="form-floating">
+                    <select class="form-select" [(ngModel)]="selectedairport" (ngModelChange)="toString()">
+                        <option selected="" hidden="">Open this select menu</option>
+                        <option value="dfw">DFW</option>
+                        <option value="ewr">EWR</option>
+                        <option value="jfk">JFK</option>
+                        <option value="lax">LAX</option>
+                        <option value="mco">MCO</option>
+                    </select>
+                    <label>Choose Airport</label>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="form-floating">
+                    <select class="form-select" [(ngModel)]="selectedDeorArr" (ngModelChange)="toString()">
+                        <option selected="" hidden="">Open this select menu</option>
+                        <option value="departure">Departure</option>
+                        <option value="arrival">Arrival</option>
+                    </select>
+                    <label>Departure/Arrival</label>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input type="text" id="selectedAirline" name="selectedAirline" class="form-control" placeholder="Airline" [(ngModel)]="selectedAirline">
+                    <label>Type Airline</label>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 col-md-12">
+                <div class="form-floating">
+                    <input type="text" id="flightnumber" name="flightnumber" class="form-control" placeholder="FLYING FROM" [(ngModel)]="flightnumber">
+                    <label>Flight Numbers</label>
+                </div>
+            </div>
+
+
+            <div class="col-12 mt-4">
+                <button class="btn btn-secondary text-uppercase" type="button" (click)="clickme()" routerLink="/result">Search</button>
+            </div>
+        </div>
+    </div>
+</div>

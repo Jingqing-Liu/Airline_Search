@@ -1,0 +1,87 @@
+<!-- <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="isExpanded = !isExpanded">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Menus</h1>
+</mat-toolbar> -->
+
+<mat-toolbar class="mat-elevation-z8">
+    <h4 class="name">Airline Web</h4>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container" autosize>
+    <mat-sidenav
+        #sidenav
+        class="example-sidenav"
+        mode="side"
+        opened="true"
+        (mouseenter)="mouseenter()"
+        (mouseleave)="mouseleave()"
+    >
+    <img class="avatar mat-elevation-z8" src="https://www.freeiconspng.com/uploads/plane-icon-png-images--pictures--becuo-8.png" />
+
+
+    <!-- <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <span class="full-width" *ngIf="isExpanded || isShowing"
+            >Parent Menu</span
+        >
+        <mat-icon mat-list-icon>home</mat-icon>
+        <mat-icon
+            class="menu-button"
+            [ngClass]="{'rotated' : showSubmenu}"
+            *ngIf="isExpanded || isShowing"
+            >expand_more</mat-icon
+        >
+        </mat-list-item>
+        <div
+        class="submenu"
+        [ngClass]="{'expanded' : showSubmenu}"
+          *ngIf="isShowing || isExpanded"
+        >
+        <a mat-list-item routerLink="/home">Home</a>
+        <a mat-list-item routerLink="/search">Search</a>
+        <a mat-list-item routerLink="/result">Result</a>
+        <a mat-list-item routerLink="/hotel">Hotel</a>
+        <a mat-list-item routerLink="/">Back</a>
+        </div>
+    </mat-nav-list> -->
+    <mat-nav-list class="listtest">
+        <button mat-button class="menu-button" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+
+        <button mat-button class="menu-button" routerLink="/search">
+            <mat-icon>search</mat-icon>
+            <span>Search</span>
+        </button>
+
+        <button mat-button class="menu-button" routerLink="/result">
+            <mat-icon>assignment</mat-icon>
+            <span>Result</span>
+        </button>
+
+        <button mat-button class="menu-button" routerLink="/hotel">
+            <mat-icon>hotel</mat-icon>
+            <span>Hotel</span>
+        </button>
+    </mat-nav-list>
+    <mat-nav-list> </mat-nav-list>
+
+    <mat-divider class="mat-dividercss"></mat-divider>
+    
+    <p class="designation">Project Group 8</p>
+    <p class="designation">Zhiwen Zhu</p>
+    <p class="designation">Zack Luan</p>
+    <p class="designation">Jingqing Liu</p>
+    <p class="designation">Yaxi Huang</p>
+    <p class="designation">Yuchen Zhang</p>
+    </mat-sidenav>
+
+    <mat-sidenav-content>    
+        <div class="content mat-elevation-z8">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,116 @@
+<table class="table table-striped" *ngIf="type == true">
+    <thead>
+        <tr>
+            <th>
+                Airline
+            </th>
+
+            <th>
+                Flight Number
+            </th>
+
+            <th>
+                Departure from
+            </th>
+
+            <th>
+                Departure Gate
+            </th>
+
+            <th>
+                Takeoff time
+            </th>
+
+            <th>
+                Arrival Gate
+            </th>
+
+            <th>
+                Arrival Terminal
+            </th>
+
+            <th>
+                Estimated Time
+            </th>
+
+            <th>
+                Actual Time
+            </th>
+
+            <th>
+                Bagge 
+            </th>
+
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dep of Flights">
+            <td>{{dep.airline.name}}</td>
+            <td>{{dep.flight.iataNumber}}</td>
+            <td>{{dep.departure.iataCode}}</td> 
+            <td>{{dep.departure.gate}}</td> 
+            <td>{{dep.departure.actualRunway}}</td> 
+            <td>{{dep.arrival.gate}}</td> 
+            <td>{{dep.arrival.terminal}}</td>
+            <td>{{dep.arrival.scheduledTime}}</td>
+            <td>{{dep.arrival.actualRunway}}</td>
+            <td>{{dep.arrival.baggage}}</td>
+            <td>{{dep.status}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<table class="table table-striped" *ngIf="type == false">
+    <thead>
+        <tr>
+            <th>
+                Airline
+            </th>
+
+            <th>
+                Flight Number
+            </th>
+
+            <th>
+                Departure Terminal
+            </th>
+
+            <th>
+                Departure Gate
+            </th>
+            <th>
+                Scheduled Time
+            </th>
+            <th>
+                Actual Time
+            </th>
+            <th>
+                Land
+            </th>
+            <th>
+                Arrival Time
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dep of Flights">
+            <td>{{dep.airline.name}}</td>
+            <td>{{dep.flight.iataNumber}}</td>
+            <td>{{dep.departure.terminal}}</td>
+            <td>{{dep.departure.gate}}</td>
+            <td>{{dep.departure.scheduledTime}}</td>
+            <td>{{dep.departure.estimatedRunway}}</td>
+            <td>{{dep.arrival.iataCode}}</td>
+            <td>{{dep.arrival.scheduledTime}}</td>
+            <td>{{dep.status}}</td>
+        </tr>
+    </tbody>
+</table>

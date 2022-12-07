@@ -1,0 +1,29 @@
+.interface-container{
+    width:1024px;
+}
+
+  /** Custom interface styles  **/
+
+.existing-card{
+    min-width:20rem;
+    width:30%;
+    
+}
+
+
+.rounded-card{
+    border-radius: .5rem;
+}
+.card-banner {
+    position: relative;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: .5rem;
+    right: 1rem;
+}
+
+.card-body-height {
+    height:auto;
+}
